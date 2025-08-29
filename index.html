@@ -2,76 +2,118 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Northwind</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Northwind</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"> -->
-    <link href="bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="client.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-        crossorigin="anonymous"></script>
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="client.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+  <script src="discount.js" defer></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><i class="bi bi-compass"></i> Northwind</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarScroll">
-                <ul class="navbar-nav me-auto my-2 my-lg-0">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <i class="bi bi-boxes"></i> Products
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-tags"></i> Browse Categories</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-search"></i> Product Search</a></li>
-                            <li>
-                                <hr class="dropdown-divider border-secondary">
-                            </li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-percent"></i> Current Discounts</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <i class="bi bi-people"></i> Customers
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-person-add"></i> Register</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-in-right"></i> Sign In</a></li>
-                        </ul>
-                    </li>
-
-                </ul>
-                <form class="d-none d-md-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i><span
-                            class="visually-hidden">Search</span></button>
-                </form>
-            </div>
-        </div>
-    </nav>
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
     <div class="container-fluid">
-        <div class="p-4 m-4 bg-light border rounded">
-            <h1 class="display-5 fw-bold">Northwind</h1>
-            <p class="fs-4">Welcome To Delicious!</p>
-            <hr class="border-secondary-emphasis">
-            <p class="fs-5">Order some tasty vittles and libations today!</p>
-            <button class="btn btn-primary"><i class="bi bi-cart-plus"></i> Order Now</button>
-        </div>
+      <a class="navbar-brand" href="#"><i class="bi bi-compass"></i> Northwind</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-boxes"></i> Products
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#"><i class="bi bi-tags"></i> Browse Categories</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-search"></i> Product Search</a></li>
+              <li>
+                <hr class="dropdown-divider border-secondary">
+              </li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-percent"></i> Current Discounts</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-people"></i> Customers
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#"><i class="bi bi-person-add"></i> Register</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-in-right"></i> Sign In</a></li>
+            </ul>
+          </li>
+
+        </ul>
+        <form class="d-none d-md-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i><span
+              class="visually-hidden">Search</span></button>
+        </form>
+      </div>
     </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="p-4 m-4 bg-light border rounded">
+      <h1 class="display-5 fw-bold">Northwind</h1>
+      <p class="fs-4">Welcome To Delicious!</p>
+      <hr class="border-secondary-emphasis">
+      <p class="fs-5">Order some tasty vittles and libations today!</p>
+      <button class="btn btn-primary"><i class="bi bi-cart-plus"></i> Order Now</button>
+    </div>
+    <div class="row p-2 m-2" id="discount-row">
+      <div class="col px-2 py-4">
+        <h3>Tis the seasoning</h3>
+        <div class="mb-4">
+          Order today! Save 12.5% on Chef Anton's Italian Seasoning.
+          You don't want to make Chef Anton mad, do you?
+        </div>
+        <i>Discount expires: 2/25/2025</i><br />
+        <i class="bi bi-receipt"></i> <a href="#" class="discount" data-code="1337" data-title="Tis the seasoning" data-product="Chef Anton's Italian Seasoning">Discount Code</a>
+      </div>
+      <div class="col px-2 py-4">
+        <h3>Don't be Crabby</h3>
+        <div class="mb-4">
+          The weather outside might be cold but our holiday deals are hot!
+          Don't miss out on 20% off our Boston Crab Meat!
+        </div>
+        <i>Discount expires: 2/25/2025</i><br />
+        <i class="bi bi-receipt"></i> <a href="#" class="discount" data-code="0451" data-title="Don't be Crabby" data-product="Boston Crab Meat">Discount Code</a>
+      </div>
+      <div class="col px-2 py-4">
+        <h3>Ho Ho Ho</h3>
+        <div class="mb-4">
+          Instead of leaving Santa milk and cookies this year,
+          how about a bottle of our finest Laughing Lumberjack Lager?
+          On sale now for 35% off!
+        </div>
+        <i>Discount expires: 2/25/2025</i><br />
+        <i class="bi bi-receipt"></i> <a href="#" class="discount" data-code="4242" data-title="Ho Ho Ho" data-product="Laughing Lumberjack Lager">Discount Code</a>
+      </div>
+    </div>
+  </div>
+  <!-- toast -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast" data-bs-autohide="false" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header text-white bg-red">
+        <strong class="me-auto" id="product">Product</strong>
+        <small class="text-body-white" id="title">discount title</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body bg-green" id="code">
+        Discount Code: 1234
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
